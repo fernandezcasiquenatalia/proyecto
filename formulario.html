@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Libro de Visitas</title>
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #000, #e6b42d); 
+    padding: 30px;
+    color:#333;
+}
+
+h1{
+    text-align:center;
+    color: #fff;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px #000;
+}
+
+form{
+    max-width: 600px;
+    margin: auto;
+    display:flex;
+    flex-direction: column;
+    gap: 15px;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    border: 1px solid #af8019;
+}
+
+input, textarea{
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #a8b3d1;
+    font-size: 16px;
+    background: #f4f7ff;
+    transition: all .2s;
+}
+
+input:focus, textarea:focus{
+    border-color: #d4bc2f;
+    box-shadow: 0 0 6px rgba(206, 194, 25, 0.4);
+    background: #fff;
+    outline: none;
+}
+
+button{
+    padding: 12px;
+    background: #c58d13;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background .2s, transform .2s;
+}
+
+button:hover{
+    background: #c09a1b;
+    transform: scale(1.05);
+}
+
+.btn-volver{
+    display:block;
+    width:200px;
+    text-align:center;
+    margin: 20px auto;
+    padding:10px;
+    background:#6a8afc;
+    color:white;
+    text-decoration:none;
+    border-radius:6px;
+    transition: 0.3s;
+}
+
+.btn-volver:hover{
+    background:#5874d8;
+}
+</style>
+</head>
+<body>
+
+<h1>Deja tu comentario</h1>
+
+<form action="guardar_visitas.php" method="post">
+    <label>Nombre:</label>
+    <input type="text" name="nombre" required>
+
+    <label>Comentario:</label>
+    <textarea name="comentario" rows="5" required></textarea>
+
+    <button type="submit">Enviar</button>
+</form>
+
+<a href="listar_visitas.php" class="btn-volver">Ver comentarios</a>
+
+</body>
+</html>
+
